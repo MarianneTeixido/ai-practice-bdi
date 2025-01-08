@@ -67,8 +67,8 @@ __Ejercicio:__
 __Objetivo:__  Crear una interfaz web básica para el MVP.
 
 __Ejercicio:__   
-- Usar Flask para servir una página web simple.  
-- Agregar botones para grabar audio, mostrar transcripciones, y reproducir audio generado.  
+- Usar Flask para servir una página web simple. (Opcional, pueden usar la herramienta que mas les acomode) 
+- Agregar botones para grabar audio, mostrar transcripciones, y reproducir audio generado.   
 - Crear un frontend básico con HTML/CSS.  
 
 ### Día 8: Iteración y Mejora
