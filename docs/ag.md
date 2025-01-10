@@ -1,72 +1,56 @@
-# Ejercicio 
+# Sistema de Reconocimiento Facial para Control de Accesos con Raspberry Pi
 
-## Propuesta 
+## Resumen del proyecto
 
-### 1. Sistema de Speech-Driven Avatar Simpler
-Descripción: Crear un avatar simple impulsado por voz desde cero. Usar herramientas más livianas que TensorFlow, como PyTorch o bibliotecas preentrenadas como transformers.  
+Este proyecto tiene como objetivo crear un sistema que use reconocimiento facial para controlar accesos. La idea es que con una Raspberry Pi puedas detectar rostros en tiempo real, compararlos con una base de datos de usuarios autorizados, y activar algo como una cerradura, un motor o cualquier mecanismo para dar acceso. Vas a trabajar desde la configuración del hardware hasta la implementación del software y las pruebas finales.  
 
-Objetivo: Permitir que un usuario hable, y que el avatar realice movimientos básicos (por ejemplo, abrir/cerrar la boca sincronizado con el audio).
-Reto: Introducir conceptos básicos de procesamiento de audio y sincronización.
+El resultado debe ser algo funcional y básico, pero listo para que después se pueda mejorar o ampliar.
 
-### 2. Sistema de Reconocimiento Facial para Acceso con Raspberry Pi
-Descripción: Crear un sistema de reconocimiento facial para controlar accesos. Usar OpenCV y una Raspberry Pi para identificar rostros y desbloquear accesos (puertas, sistemas virtuales).
+## Objetivos de aprendizaje 
+1. Aprender cómo funciona el reconocimiento facial usando herramientas como OpenCV y face_recognition.
+2. Entender cómo conectar software y hardware para que trabajen juntos, como usar un relay o un motor desde la Raspberry Pi.
+3. Optimizar el sistema para que corra bien en un entorno con recursos limitados, como lo es la Raspberry Pi.
+4. Desarrollar un proyecto de principio a fin, con pruebas, ajustes y documentación.
 
-Objetivo: Implementar detección facial y almacenamiento de perfiles. Permitir acceso solo a usuarios autorizados.
+## Consideraciones generales
 
-Reto: Usar modelos de reconocimiento facial eficientes, como dlib o face_recognition.
+- Presupuesto: Vamos a usar componentes económicos, pero que funcionen bien para lo que necesitamos.
+- Modularidad: Todo lo que hagas debe ser fácil de modificar o mejorar después.
+- Seguridad: El sistema tiene que ser confiable y permitir acceso solo a usuarios autorizados.
+- Eficiencia: Hay que asegurarse de que la Raspberry Pi no se sature y todo corra de manera fluida.
 
-### 3. Chatbot Multimodal (Texto y Voz)
-Descripción: Crear un chatbot que responda preguntas utilizando voz y texto. El usuario puede escribir o hablar, y el bot responde en ambos formatos.
+## Críterios mínimos de aceptación
 
-Objetivo: Integrar herramientas como Speech-to-Text, Text-to-Speech, y OpenAI GPT.
+- El sistema debe poder detectar y reconocer rostros en tiempo real con buena precisión.
+- Tiene que haber una forma de gestionar los usuarios autorizados (agregar, editar, eliminar).
+- Cuando detecte un rostro autorizado, debe activar el mecanismo de acceso.
+- Registrar todo: accesos permitidos y rechazados, con fecha y hora.
+- Crear una interfaz básica para gestionar usuarios y revisar registros.
 
-Reto: Aprender a combinar entradas de texto y voz con respuestas generadas dinámicamente.
+## Consideraciones técnicas
 
-### 4. Sistema de Control por Gestos
-Descripción: Crear un sistema de control básico por gestos que permita manejar un dispositivo o interfaz (p. ej., encender/apagar un LED o controlar un reproductor multimedia).
- 
-Objetivo: Implementar detección de gestos con Python y OpenCV.
+#### Hardware:
+- Raspberry Pi 4 con mínimo 2GB de RAM.
+- Cámara (puede ser el módulo oficial de Raspberry Pi o una USB).
+- Relay de 5V o cualquier controlador que necesites para manejar el mecanismo de acceso.
 
-Reto: Diseñar un modelo sencillo o usar técnicas de visión computacional para interpretar gestos.
+__Recomendación:__ Comprar los componentes en [AGElectrónica](https://www.agelectronica.com/?sc=general), [UNIT Electrónics](https://uelectronics.com/) ó  [330ohms](https://www.330ohms.com/)
 
-### 5. Sistema de Análisis Emocional
-Descripción: Desarrollar una herramienta que analice las emociones del usuario a partir de la voz o expresiones faciales.
+### Software:
+- Raspberry Pi OS.
+- OpenCV y face_recognition.
 
-Objetivo: Usar redes preentrenadas para detección de emociones y generar respuestas personalizadas.
+#### Optimización:
+- Baja la resolución de las imágenes para procesarlas más rápido.
+- Asegúrate de que el código esté lo más limpio y eficiente posible.
 
-Reto: Entrar en el campo de la IA afectiva (Affective Computing).
 
-### 6. Conversión de Voz a Texto en Tiempo Real para Notas Inteligentes
-Descripción: Crear un sistema que transcriba reuniones en tiempo real y resuma los puntos clave.
+## Alternativa Económica para el Control de Accesos
+Si ves que la cerradura eléctrica no es viable por el presupuesto, podemos usar un servo motor.  
+Es más barato y puede hacer lo mismo si se usa con un pestillo.
 
-Objetivo: Integrar Speech-to-Text con algoritmos de resumen de texto.
+#### Ventajas del Servo Motor:
 
-Reto: Manejar grandes volúmenes de datos de texto y estructurarlos inteligentemente.
-
-### 7. Control Inteligente de Dispositivos Domésticos
-Descripción: Crear un asistente básico para controlar dispositivos del hogar (simulado o real) usando comandos de voz o texto.
-
-Objetivo: Integrar procesamiento de voz y protocolos como MQTT o WebSockets para la comunicación.
-
-Reto: Simular un hogar inteligente con Python.
-
-### 8. Sistema de Reconocimiento de Idiomas
-Descripción: Crear un sistema que detecte el idioma hablado y lo clasifique.
-
-Objetivo: Usar Python y modelos preentrenados para detección de características acústicas de diferentes lenguajes.
-
-Reto: Familiarizarse con conceptos de procesamiento de audio más avanzados.
-
-### 9. Simulador de Movimientos Basado en Voz
-Descripción: Crear un simulador donde comandos de voz generen movimientos básicos en un brazo robótico virtual (p. ej., usando PyBullet o Mujoco).
-
-Objetivo: Usar STT para interpretar comandos y mover el modelo simulado.
-
-Reto: Introducir nociones de control y simulación mecánica.
-
-### 10. Visualización de Datos de Interacciones con IA
-Descripción: Crear un dashboard que analice e interprete las interacciones de un sistema de voz/chat con los usuarios.
-
-Objetivo: Visualizar datos como frecuencia de uso, tipos de preguntas, y tiempos de respuesta.
-
-Reto: Aprender a generar insights útiles a partir de datos de interacción.
+- Es económico.
+- Se conecta fácil a la Raspberry Pi.
+- Consume menos energía.
