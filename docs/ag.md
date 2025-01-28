@@ -54,3 +54,5 @@ Es más barato y puede hacer lo mismo si se usa con un pestillo.
 - Es económico.
 - Se conecta fácil a la Raspberry Pi.
 - Consume menos energía.
+
+export source_chat_transcript_gcs_bucket="qwiklabs-gcp-00-276a05a5ca03-ccai-insights-sample-transcripts"
