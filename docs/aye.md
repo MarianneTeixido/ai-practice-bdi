@@ -40,8 +40,8 @@ __Objetivo:__ Entender estructuras de datos y funciones en Python. Implementar u
 
 
 __Actividades:__
-- Crear y usar funciones en Python (def).
-- Hacer ejercicios con listas y diccionarios, como almacenar datos de personas.
+- Crear una agenda de contactos con una lista de diccionarios.
+- Implementar funciones para agregar, buscar y mostrar contactos.
 
 __Ejecicio:__
 
@@ -49,3 +49,28 @@ __Ejecicio:__
 - Crear una función  ```mostrar_contactos() ``` que imprima todos los contactos almacenados.
 - Crear una función  ```buscar_contacto() ``` que permita encontrar un contacto por nombre.
 - Usar un bucle para que el usuario pueda agregar, buscar y mostrar contactos mediante un menú interactivo.
+
+### 3. Intruducción a NumPy y Matplotlib
+
+__Objetivo:__ Conocer librerías esenciales para IA.
+
+__Ejercicio:__
+- Generar una lista de 100 números aleatorios y graficarlos usando Matplotlib.
+- Comparar la media y la mediana usando NumPy.
+
+### 4. Pandas y Manejo de Datos
+
+__Objetivo:__  Manipular datos con pandas.
+
+__Ejecicio:__
+- Descargar un archivo CSV de datos abiertos (ej. sobre clima o precios).
+- Cargarlo con pandas, mostrar las primeras filas y hacer un análisis básico (.describe()).
+- Graficar una columna usando Matplotlib.
+
+### 5.  Introducción a Machine Learning con Scikit-learn
+
+__Objetivo:__ Comprender el concepto de aprendizaje automático.
+__Ejecicio:__ 
+- Cargar el dataset de iris (```from sklearn.datasets import load_iris```).
+- Dividirlo en conjunto de entrenamiento y prueba.
+- Implementar una [Regresión Logística](https://cienciadedatos.net/documentos/py17-regresion-logistica-python) para predecir la especie de flor usando [Scikit-learn](https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html#). 
