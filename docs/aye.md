@@ -31,7 +31,8 @@ __Recursos:__
 - [Tutorial Python W3S](https://www.w3schools.com/python/)
 
 __Ejercicios simples:__
-- Imprimir mensajes, operaciones matemáticas y ciclos.
+- Escribir un script que pida al usuario su nombre y edad, y luego imprima un mensaje personalizado con la edad que tendrá en 10 años. 
+- Experimentar con operaciones matemáticas y estructuras de control (if, for, while)
 
 ### 2. Funciones, Listas y Diccionarios en Python
 
